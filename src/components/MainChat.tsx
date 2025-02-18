@@ -1,22 +1,12 @@
 "use client";
 import { useState } from "react";
-import {
-  Send,
-  Upload,
-  Settings,
-  MessageSquare,
-  History,
-  Globe2,
-  FileText,
-} from "lucide-react";
+import { Send, Upload, Settings, Globe2 } from "lucide-react";
 
 const MainChat = () => {
   const [inputText, setInputText] = useState("");
 
   return (
     <div className="flex h-screen bg-gray-50">
-      
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         <div className="flex justify-between items-center p-4 border-b">
@@ -41,7 +31,7 @@ const MainChat = () => {
             <div className="flex-1">
               <p className="bg-white p-4 rounded-lg shadow-sm">
                 Hello! I can help you with text translation, summarization, and
-                language detection. 
+                language detection.
               </p>
             </div>
           </div>
