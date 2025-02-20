@@ -52,7 +52,7 @@ const LanguageContextProvider = ({
     setInputText("");
 
     try {
-      // @ts-ignore - Chrome AI API
+      // @ts-ignore
       const detector = await window.ai.languageDetector.create();
       const result = await detector.detect(inputText);
       newMessage.language = result[0].detectedLanguage;
@@ -73,7 +73,7 @@ const LanguageContextProvider = ({
 
     setTranslatingMessage(text);
     try {
-      // @ts-ignore - Chrome AI API
+      // @ts-ignore
       const translator = await window.ai.translator.create({
         sourceLanguage: language,
         targetLanguage: targetLanguage,

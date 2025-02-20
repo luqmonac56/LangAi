@@ -110,7 +110,7 @@ export default function MainChat() {
     handleSend,
     selectedLanguage,
     setSelectedLanguage,
-    translatedText,
+    // translatedText,
   } = useLanguage();
 
   return (
