@@ -10,13 +10,18 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const detectorToken = process.env.NEXT_PUBLIC_DETECTOR_TEST_TOKEN;
+  const translatorToken = process.env.NEXT_PUBLIC_TRANSLATOR_TEST_TOKEN;
+
   return (
     <html lang="en">
       <head>
-        <meta
-          httpEquiv="origin-trial"
-          content="AsXoU7wJWmSW9vhe7Wn4o4H3BhaSJts7pqFkkjzFTa5PIsJDXn6FB7GFT3Ge3Q7QWlfZbtPE/g7HxHIh0XC6gAIAAAB4eyJvcmlnaW4iOiJodHRwczovL2xhbmctYWktb3BhbC52ZXJjZWwuYXBwOjQ0MyIsImZlYXR1cmUiOiJMYW5ndWFnZURldGVjdGlvbkFQSSIsImV4cGlyeSI6MTc0OTU5OTk5OSwiaXNTdWJkb21haW4iOnRydWV9"
-        />
+        {detectorToken && (
+          <meta httpEquiv="origin-trial" content={detectorToken} />
+        )}
+        {translatorToken && (
+          <meta httpEquiv="origin-trial" content={translatorToken} />
+        )}
       </head>
       <body>
         <LanguageContextProvider>{children}</LanguageContextProvider>
